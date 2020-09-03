@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mevlana | signin</title>
+    <meta name="viewport" content="width-device-width , initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/mainjs.js"></script>
+</head>
+<body>
+<div class="content">
+
+
+    <div class="sign-box">
+        <div class="sign-container">
+            <form>
+                <div class="radio-div">
+                    <p>ثبت نام به عنوان</p>
+                    <span>
+                        <input type="radio" id="artist" name="gender" value="male" checked>
+                        <label for="artist">هنرمند</label><br>
+                    </span>
+                    <span>
+                        <input type="radio" id="user" name="gender" value="male">
+                        <label for="user">کاربر</label>
+                    </span>
+                </div>
+                <div class="input-container">
+                    <label for="username">نام کاربری</label>
+                    <i class="far fa-user-circle"> </i>
+                    <input class="form-input" type="text" id="username" name="username"
+                           placeholder="نام کاربریتو وارد کن...">
+
+                </div>
+                <div class="input-container">
+                    <label for="pass">شماره همراه</label>
+                    <i class="fas fa-phone"> </i>
+                    <input class="form-input" type="text" id="phone" name="password"
+                           placeholder="کلمه عبورتو وارد کن...">
+                    <!--                    <span ><i class="fa  "></i></span>-->
+                </div>
+                <div class="input-container">
+                    <label for="pass">کلمه عبور</label>
+                    <i class="fas fa-lock"> </i>
+                    <input class="form-input" type="password" id="pass" name="password"
+                           placeholder="کلمه عبورتو وارد کن...">
+                    <span onclick="myFunction2()"><i class="fa fa-eye"></i> </span>
+                </div>
+                <div class="btn-login-section">
+                    <a href="">کلمه عبور را فراموش کردی؟</a>
+                    <div class="remember">
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe">
+                        <label for="rememberMe">مرا به خاطر بسپار</label>
+                    </div>
+
+
+                </div>
+                <button type="submit" class="btn">ورود به مِولانا</button>
+            </form>
+        </div>
+    </div>
+    <div class="mevlana-box">
+        <div class="mevlana-container">
+            <div class="row">
+                <h1 class="site-title">MEVLANA</h1>
+            </div>
+            <div class="row">
+                <P id="register-paragraph">اگه قبلا ثبت نام نکردی<br> اینجا کلیک کن</P>
+            </div>
+            <div class="row">
+                <button type="submit" class="sign-btn">ثبت نام</button>
+            </div>
+
+        </div>d
+    </div>
+
+</div>
+
+</body>
+</html>

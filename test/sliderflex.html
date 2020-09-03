@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .Quotes {
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+        .Quote {
+            flex: 0 0 100%;
+            position: absolute;
+            width: 100%;
+            left: 100%;
+            order: 2;
+            transition: left 1s, opacity 1s;
+            opacity: 0;}
+        blockquote {
+            max-width: 950px;
+            margin: auto;
+            position: relative;
+        }
+        &.active {
+             left: 0;
+             order: 1;
+             transition: left 1s, opacity 1s;;
+             opacity: 1;
+         }
+        &.last {
+             left: -100%;
+             order: 10;
+             transition: left 1s, opacity 1s;;
+         }
+        }
+        }
+    </style>
+    <script type="javascript">
+        componentDidMount() {
+            this.setState({width: window.innerWidth});
+            if (this.props.quotes.length > 1) {
+                window.setTimeout(this.rotateQuote, 10000);
+            }
+            this.getHeight(this.state.quotes);
+            window.addEventListener("resize",
+                this.updateDimensions.bind(this));
+        }
+        ---------------
+            getHeight = (quotes) => {
+            let maxHeight = 0;
+            quotes.map((quote, index) => {
+                let quoteBlock = this.refs[quote.id].getBoundingClientRect();
+                if (quoteBlock.height > maxHeight) {
+                    maxHeight = quoteBlock.height;
+                }
+                return false;
+            });
+
+            this.setState({barHeight: maxHeight});
+
+        };
+    </script>
+</head>
+<body>
+<section class="ContentRow">
+    <div class="Content">
+        <div class="Quotes">
+            <div class="Quote">
+                <blockquote>
+                    <div>There are three crafts you need to look for in any web development firm: Coding chops, data engineering, and business analysis. Ashday is the only firm I've found with all 3... </div>
+                    <div class="attribution_one">Joel Hughes</div>
+                    <div class="attribution_two">SGC Inc.</div>
+                </blockquote>
+            </div>
+            <div class="Quote">
+                <blockquote>
+                    <div>...Their business analysis skills are so sharp that they will ensure that whatever solution they create will have lasting value and scaleability, even if that means asking the hard questions.</div>
+                    <div class="attribution_one">Joel Hughes</div>
+                    <div class="attribution_two">SGC Inc.</div>
+                </blockquote>
+            </div>
+            <div class="Quote">
+                <blockquote>
+                    <div>...We have saved tons of time, money, and frustration by working with Ashday over the years because they will not let you build something that won't correctly solve your business challenge...</div>
+                    <div class="attribution_one">Joel Hughes</div>
+                    <div class="attribution_two">SGC Inc.</div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

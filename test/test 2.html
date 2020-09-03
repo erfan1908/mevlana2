@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mevlana | signin</title>
+    <meta name="viewport" content="width-device-width , initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="js/mainjs.js"></script>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        .radio-toolbar input[type="radio"] {
+            display: none;
+        }
+
+        .radio-toolbar label {
+            display: inline-block;
+            background-color: #ddd;
+            padding: 4px 11px;
+            font-family: Arial;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .radio-toolbar input[type="radio"]:checked+label {
+            background-color: #bbb;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="content">
+    <div class="radio-toolbar">
+        <input type="radio" id="radio1" name="radios" value="all" checked>
+        <label for="radio1">All</label>
+
+        <input type="radio" id="radio2" name="radios" value="false">
+        <label for="radio2">Open</label>
+
+        <input type="radio" id="radio3" name="radios" value="true">
+        <label for="radio3">Archived</label>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>
